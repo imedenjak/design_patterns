@@ -4,16 +4,19 @@ using PP_Decorator;
 
 Console.WriteLine("Hello, World!");
 
-IHat hat = new RibbonedHat(new GoldenHat(new StandardHat("Baseball cap")));
+var standardHat = new StandardHat("Baseball cap");
+var premiumHat = new PremiumHat("Top hat");
+
+IHat hat = new RibbonHat(new GoldenHat(standardHat));
 Console.WriteLine($"{hat.Description} \t\t {hat.Price}");
 
-hat = new RibbonedHat(new GoldenHat(new PremiumHat("Top hat")));
+hat = new RibbonHat(new GoldenHat(premiumHat));
 Console.WriteLine($"{hat.Description} \t\t {hat.Price}");
 
-hat = new GoldenHat(new StandardHat("Baseball cap"));
+hat = new GoldenHat(standardHat);
 Console.WriteLine($"{hat.Description} \t {hat.Price}");
 
-hat = new RibbonedHat(new PremiumHat("Top cap"));
+hat = new RibbonHat(premiumHat);
 Console.WriteLine($"{hat.Description} \t {hat.Price}");
 
 

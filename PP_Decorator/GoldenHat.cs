@@ -13,7 +13,7 @@ public class GoldenHat : HatDecorator
         base(decoratedHat)
     {
     }
-    public override int Price => _decoratedHat.Price + (IsPremium ? GoldenPricePrem : GoldenPriceStd);
-    public override string Description => $"{GoldenDesc} {_decoratedHat.Description}";
-    public override bool IsPremium => _decoratedHat.IsPremium;
+
+    public override int Price => base.Price + (IsPremium ? GoldenPricePrem : GoldenPriceStd);
+    public override string Description => $"{GoldenDesc} {base.Description}";
 }

@@ -5,8 +5,8 @@ namespace PP_Decorator;
 /// </summary>
 public interface IHat
 {
-    public string Name { get; }
-    public int Price { get; }
-    public string Description { get; }
-    public bool IsPremium { get; }
+    string Name { get; }
+    int Price { get; }
+    string Description { get; }
+    bool IsPremium { get; }
 }
