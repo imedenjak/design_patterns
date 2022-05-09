@@ -4,18 +4,18 @@ using PP_Adapter;
 
 Console.WriteLine("Hello, World!");
 
-HatAdapter goldenHat = new HatAdapter(new Hat("Golden hat", "Golden hat",4999));
-HatAdapter pointyHat = new HatAdapter(new Hat("Pointy hat", "Pointy hat", 3000));
-HatAdapter purpleHat = new HatAdapter(new Hat("Purple hat", "Purple hat",1490));
+var goldenHat = new HatAdapter(new Hat("Golden hat", "Golden hat",4999));
+var pointyHat = new HatAdapter(new Hat("Pointy hat", "Pointy hat", 3000));
+var purpleHat = new HatAdapter(new Hat("Purple hat", "Purple hat",1490));
 
 ShoppingCart shoppingCart = new ShoppingCart();
 
-shoppingCart.add(goldenHat);
-shoppingCart.add(pointyHat);
-shoppingCart.add(purpleHat);
+shoppingCart.Add(goldenHat);
+shoppingCart.Add(pointyHat);
+shoppingCart.Add(purpleHat);
 
-shoppingCart.remove(pointyHat);
+shoppingCart.Remove(pointyHat);
 
-Console.WriteLine(shoppingCart.getReceipt());
+Console.WriteLine(shoppingCart.GetReceipt());
 
 Console.ReadLine();

@@ -5,6 +5,6 @@ namespace PP_Adapter;
 /// </summary>
 public abstract class Item
 {
-    public abstract string itemName { get; }
-    public abstract int itemPrice { get; }
+    public abstract string ItemName { get; }
+    public abstract int ItemPrice { get; }
 }

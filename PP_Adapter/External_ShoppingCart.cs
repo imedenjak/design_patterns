@@ -7,42 +7,42 @@ namespace PP_Adapter;
 /// </summary>
 public class ShoppingCart
 {
-    private List<Item> items = new ();
+    private readonly List<Item> _items = new ();
 
-    public void add(Item item)
+    public void Add(Item item)
     {
-        items.Add(item);
+        _items.Add(item);
     }
 
-    public bool remove(Item item)
+    public bool Remove(Item item)
     {
-        return items.Remove(item);
+        return _items.Remove(item);
     }
 
-    public long getTotalPrice()
+    private long GetTotalPrice()
     {
         long result = 0;
-        foreach (var item in items)
+        foreach (var item in _items)
         {
-            result += item.itemPrice;
+            result += item.ItemPrice;
         }
         return result;
     }
 
-    public string getReceipt()
+    public string GetReceipt()
     {
-        StringBuilder result = new StringBuilder();
-        foreach (var item in items)
+        var result = new StringBuilder();
+        foreach (var item in _items)
         {
-            result.Append($"{item.itemName} \t {formatMoney(item.itemPrice)} {Environment.NewLine}");
+            result.Append($"{item.ItemName} \t {FormatMoney(item.ItemPrice)} {Environment.NewLine}");
         }
 
         result.Append($"-------------------------- {Environment.NewLine}");
-        result.Append($"Total:\t\t { formatMoney(getTotalPrice())} {Environment.NewLine}");
+        result.Append($"Total:\t\t { FormatMoney(GetTotalPrice())} {Environment.NewLine}");
         return result.ToString();
     }
 
-    private string formatMoney(long money)
+    private static string FormatMoney(long money)
     {
         return $"€ {money / 100} . {money % 100}";
     }
