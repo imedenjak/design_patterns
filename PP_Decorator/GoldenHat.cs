@@ -3,21 +3,17 @@ namespace PP_Decorator;
 /// <summary>
 /// Decorator class
 /// </summary>
-public class GoldenHat : IHat
+public class GoldenHat : HatDecorator
 {
     private const int GoldenPriceStd = 200;
     private const int GoldenPricePrem = 1000;
     private const string GoldenDesc = "Golden";
-    
-    private readonly IHat _decoratedHat;
 
-    public GoldenHat(IHat decoratedHat)
+    public GoldenHat(IHat decoratedHat) :
+        base(decoratedHat)
     {
-        _decoratedHat = decoratedHat;
     }
-
-    public string Name => _decoratedHat.Name;
-    public int Price => _decoratedHat.Price + (IsPremium ? GoldenPricePrem : GoldenPriceStd);
-    public string Description => $"{GoldenDesc} {_decoratedHat.Description}";
-    public bool IsPremium => _decoratedHat.IsPremium;
+    public override int Price => _decoratedHat.Price + (IsPremium ? GoldenPricePrem : GoldenPriceStd);
+    public override string Description => $"{GoldenDesc} {_decoratedHat.Description}";
+    public override bool IsPremium => _decoratedHat.IsPremium;
 }
