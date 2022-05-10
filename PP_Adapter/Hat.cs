@@ -1,5 +1,8 @@
 namespace PP_Adapter;
 
+/// <summary>
+/// Incompatible thing
+/// </summary>
 public class Hat
 {
     public string ShortName { get; }

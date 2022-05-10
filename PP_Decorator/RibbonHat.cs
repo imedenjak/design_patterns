@@ -1,7 +1,7 @@
 namespace PP_Decorator;
 
 /// <summary>
-/// Decorator class
+/// Decorator class - specific decorator - IS a decorator
 /// </summary>
 public class RibbonHat : HatDecorator
 {

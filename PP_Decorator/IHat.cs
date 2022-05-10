@@ -1,7 +1,7 @@
 namespace PP_Decorator;
 
 /// <summary>
-/// Base interface
+/// Base interface - thing
 /// </summary>
 public interface IHat
 {

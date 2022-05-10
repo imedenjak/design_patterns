@@ -1,5 +1,8 @@
 namespace PP_Adapter;
 
+/// <summary>
+/// IS a Compatible thing and HAS a Incompatible thing
+/// </summary>
 public class HatAdapter : Item
 {
     private Hat Hat { get; }

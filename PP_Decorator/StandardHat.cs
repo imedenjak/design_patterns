@@ -1,7 +1,7 @@
 namespace PP_Decorator;
 
 /// <summary>
-/// Concrete Component 2
+/// Concrete Component 2 - specific thing - IS a thing
 /// </summary>
 public class StandardHat : IHat
 {

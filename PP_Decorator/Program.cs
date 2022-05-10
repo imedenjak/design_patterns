@@ -4,8 +4,9 @@ using PP_Decorator;
 
 Console.WriteLine("Hello, World!");
 
-var standardHat = new StandardHat("Baseball cap");
-var premiumHat = new PremiumHat("Top hat");
+// Client talks to thing
+IHat standardHat = new StandardHat("Baseball cap");
+IHat premiumHat = new PremiumHat("Top hat");
 
 IHat hat = new RibbonHat(new GoldenHat(standardHat));
 Console.WriteLine($"{hat.Description} \t\t {hat.Price}");

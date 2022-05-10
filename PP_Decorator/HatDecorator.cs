@@ -1,7 +1,7 @@
 namespace PP_Decorator;
 
 /// <summary>
-/// Base decorator
+/// Base decorator - IS a thing, wraps and adds features to it
 /// </summary>
 public abstract class HatDecorator : IHat
 {

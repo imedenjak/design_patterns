@@ -4,9 +4,10 @@ using PP_Adapter;
 
 Console.WriteLine("Hello, World!");
 
-var goldenHat = new HatAdapter(new Hat("Golden hat", "Golden hat",4999));
-var pointyHat = new HatAdapter(new Hat("Pointy hat", "Pointy hat", 3000));
-var purpleHat = new HatAdapter(new Hat("Purple hat", "Purple hat",1490));
+// Client talks to Compatible thing - Item
+Item goldenHat = new HatAdapter(new Hat("Golden hat", "Golden hat",4999));
+Item pointyHat = new HatAdapter(new Hat("Pointy hat", "Pointy hat", 3000));
+Item purpleHat = new HatAdapter(new Hat("Purple hat", "Purple hat",1490));
 
 ShoppingCart shoppingCart = new ShoppingCart();
 

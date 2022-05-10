@@ -1,7 +1,7 @@
 namespace PP_Adapter;
 
 /// <summary>
-/// External Item
+/// External Item - Compatible thing
 /// </summary>
 public abstract class Item
 {
