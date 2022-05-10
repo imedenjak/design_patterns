@@ -21,7 +21,7 @@ public class ExternalSystem
 {
     public CityFromExternalSystem GetCity()
     {
-        return new CityFromExternalSystem("Zagreb", "Zabreg", 1000000);
+        return new CityFromExternalSystem("Zagreb", "Dom", 1000000);
     }
 }
 
